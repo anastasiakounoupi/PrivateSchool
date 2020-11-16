@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Add a Student</title>
+</head>
+
+<body>
+    <main class="input-form">
+
+        <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+        <div class="container container-student">
+            <form action="#" class="form">
+                <h3 class="heading-secondary">
+                    Add a student
+                </h3>
+                <input type="text" class="input" placeholder="First Name" id="stfirstname" required>
+                <label for="stfirstname"></label>
+                <input type="text" class="input" placeholder="Last Name" id="stlastname" required>
+                <label for="stlastname"></label>
+                <input type="text" id="birthday" class="input" placeholder="Date of Birth" min="1950-01-01"
+                    max="2001-12-31" onfocus="(this.type='date')" required />
+                <div class="radio-group">
+                    <label for="upfront" class="heading-tertiary">
+                        <input type="radio" class="radio" id="upfront" name="tuition" value="Pay Upfront" required>
+                        Pay upfront
+                    </label>
+                    <label for="monthly" class="heading-tertiary">
+                        <input type="radio" class="radio" id="monthly" name="tuition" value="Pay Monthly" required>
+                        pay monthly
+                    </label>
+                </div>
+                <button class="btn btn-form btn-student">Submit</button>
+            </form>
+        </div>
+
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Create Course</title>
+</head>
+
+<body>
+    <main>
+        <section class="input-form">
+            <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+            <div class="container container-course">
+                <form action="#" class="form">
+                    <h3 class="heading-secondary">
+                        Create a Course
+                    </h3>
+                    <select name="course" id="stream" class="input" required>
+                        <option value="#">---Course---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html">HTNL/CSS/JavaScript</option>
+                        <option value="Front/react">React JS</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node">Node JS</option>
+                        <option value="Back/java">Java</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" id="startDate" class="input" placeholder="Start-Date" min="2020-12-01"
+                        onfocus="(this.type='date')" required />
+                    <input type="text" id="endDate" class="input" placeholder="End-Date" min="2021-03-01"
+                        onfocus="(this.type='date')" required />
+                    <div class="radio-group">
+                        <label for="part" class="heading-tertiary">
+                            <input type="radio" class="radio" id="part" name="type" value="Part-Time" required>
+                            part-time
+                        </label>
+                        <label for="full" class="heading-tertiary">
+                            <input type="radio" class="radio" id="full" name="type" value="Full-Time" required>
+                            full-time
+                        </label>
+                    </div>
+                    <button class="btn btn-form btn-course">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>

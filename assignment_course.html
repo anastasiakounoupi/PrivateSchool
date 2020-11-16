@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Assignment per Course</title>
+</head>
+
+<body>
+    <main>
+        <section class="input-form">
+            <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+            <div class="container container_as_course">
+                <form action="#" class="form">
+                    <h3 class="heading-secondary">
+                        Assignment per Course
+                    </h3>
+                    <select name="course" id="stream_assignmentC" class="input input-sm" required>
+                        <option value="#">---Course---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html">HTNL/CSS/JavaScript</option>
+                        <option value="Front/react">React JS</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node">Node JS</option>
+                        <option value="Back/java">Java</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" id="startDate_assignmentC" class="input input-sm" placeholder="Start-Date"
+                        min="2020-12-01" onfocus="(this.type='date')" required />
+                    <input type="text" id="endDate_assignmentC" class="input input-sm" placeholder="End-Date"
+                        min="2021-03-01" onfocus="(this.type='date')" required />
+
+                    <div class="radio-group">
+                        <label for="part_assignmentC" class="heading-tertiary">
+                            <input type="radio" class="radio" id="part_assignmentC" name="type_assignmentC"
+                                value="Part-Time" required>
+                            part-time
+                        </label>
+                        <label for="full_assignmentC" class="heading-tertiary">
+                            <input type="radio" class="radio" id="full_assignmentC" name="type_assignmentC"
+                                value="Full-Time" required>
+                            full-time
+                        </label>
+                    </div>
+                    <select name="assignment" id="assignment_assignmentC" class="input input-sm" required>
+                        <option value="#">---Assignment---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html-landingpage">Create a Landing Page - HTML/CSS/JS</option>
+                        <option value="Front/html-coinGame">Create a Coin Game - HTML/CSS/JS</option>
+                        <option value="Front/react-landingpage">Create a Landing Page - React</option>
+                        <option value="Front/react-coinGame">Create a Coin Game - React</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node-e-shop">Create an e-Shop - Node JS</option>
+                        <option value="Back/node-algorithm">Compute an Algorithm - Node JS</option>
+                        <option value="Back/java-e-shop">Create an e-Shop - Java</option>
+                        <option value="Back/java-algorithm">Compute an Algorithm - Java</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" id="subDate_assignmentC" class="input input-sm" placeholder="Submission-Date"
+                        min="2020-12-01" onfocus="(this.type='date')" required required />
+                    <input type="number" class="input input-sm" placeholder="Oral Mark in %" id="oralMark_assignmentC"
+                        step="10" min="0" max="20" required>
+                    <input type="number" class="input input-sm" placeholder="Total Mark in %" id="totalMark_assignmentC"
+                        step="10" min="80" max="100" required>
+                    <button class="btn btn-form btn-assignment_course">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

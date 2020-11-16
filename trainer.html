@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Add a Trainer</title>
+</head>
+
+<body>
+    <main>
+        <section class="input-form">
+            <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+            <div class="container container-trainer">
+                <form action="#" class="form">
+                    >
+                    <h3 class="heading-secondary">
+                        Add a trainer
+                    </h3>
+                    <input type="text" class="input" placeholder="First Name" id="firstname" required>
+                    <label for="firstname"></label>
+                    <input type="text" class="input" placeholder="Last Name" id="lastname" required>
+                    <label for="lastname"></label>
+                    <select name="course" id="subject" class="input" required="required">
+                        <option value="#">---Subject---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html">HTNL/CSS/JavaScript</option>
+                        <option value="Front/react">React JS</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node">Node JS</option>
+                        <option value="Back/java">Java</option>
+                        </optgroup>
+                    </select>
+                    <button class="btn btn-form btn-trainer">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

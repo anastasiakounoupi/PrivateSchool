@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Trainer per Course</title>
+</head>
+
+<body>
+    <main>
+        <section class="input-form">
+            <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+            <div class="container container_tr_course">
+                <form action="#" class="form">
+                    <h3 class="heading-secondary">
+                        Add a trainer per Course
+                    </h3>
+                    <input type="text" class="input" placeholder="First Name" id="firstname_trainerC" required>
+                    <label for="firstname_trainerC"></label>
+                    <input type="text" class="input" placeholder="Last Name" id="lastname_trainerC" required>
+                    <label for="lastname_trainerC"></label>
+                    <select name="course" id="stream_trainerC" class="input" required>
+                        <option value="#">---Course---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html">HTNL/CSS/JavaScript</option>
+                        <option value="Front/react">React JS</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node">Node JS</option>
+                        <option value="Back/java">Java</option>
+                        </optgroup>
+                    </select>
+                    <input type="text" id="startDate_trainerC" class="input" placeholder="Start-Date" min="2020-12-01"
+                        onfocus="(this.type='date')" required />
+                    <input type="text" id="endDate_trainerC" class="input" placeholder="End-Date" min="2021-03-01"
+                        onfocus="(this.type='date')" required />
+                    <div class="radio-group">
+                        <label for="part_trainerC" class="heading-tertiary">
+                            <input type="radio" class="radio" id="part_trainerC" name="type_trainerC" value="Part-Time"
+                                required>
+                            part-time
+                        </label>
+                        <label for="full_trainerC" class="heading-tertiary">
+                            <input type="radio" class="radio" id="full_trainerC" name="type_trainerC" value="Full-Time"
+                                required>
+                            full-time
+                        </label>
+                    </div>
+                    <button class="btn btn-form btn-trainer_course">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Create an Assignment</title>
+</head>
+
+<body>
+    <main>
+        <section class="input-form">
+            <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
+            <div class="container container-assignment">
+                <form action="#" class="form">
+                    <h3 class="heading-secondary">
+                        Create an Assignment
+                    </h3>
+                    <select name="assignment" id="assignment" class="input" required>
+                        <option value="#">---Assignment---</option>
+                        <optgroup label="Front-End"></optgroup>
+                        <option value="Front/html-landingpage">Create a Landing Page - HTML/CSS/JS</option>
+                        <option value="Front/html-coinGame">Create a Coin Game - HTML/CSS/JS</option>
+                        <option value="Front/react-landingpage">Create a Landing Page - React</option>
+                        <option value="Front/react-coinGame">Create a Coin Game - React</option>
+                        </optgroup>
+                        <optgroup label="Back-End"></optgroup>
+                        <option value="Back/node-e-shop">Create an e-Shop - Node JS</option>
+                        <option value="Back/node-algorithm">Compute an Algorithm - Node JS</option>
+                        <option value="Back/java-e-shop">Create an e-Shop - Java</option>
+                        <option value="Back/java-algorithm">Compute an Algorithm - Java</option>
+                        </optgroup>
+                    </select>
+                    <input required="" type="text" id="subDate" class="input" placeholder="Submission-Date"
+                        min="2020-12-01" onfocus="(this.type='date')" required />
+                    <input type="number" class="input" placeholder="Oral Mark in %" id="oralMark" step="10" min="0"
+                        max="20" required>
+                    <input type="number" class="input" placeholder="Total Mark in %" id="totalMark" step="10" min="80"
+                        max="100" required>
+                    <button class="btn btn-form btn-assignment">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

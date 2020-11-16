@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Add a Student</title>
+</head>
+
+<body>
+    <header class=" data-header">
+        <a href="index.html" class="btn "><i class="fas fa-home"></i></a>
+        <h1 class="heading-secondary"> Add data through the forms to see the school structure</h1>
+        <a href="#" onclick="clearData()" class="btn heading-tertiary"> Clear Data <i class="far fa-trash-alt"></i></a>
+
+    </header>
+
+
+    <main>
+        <section class="input-form data-form">
+
+            <div class="data">
+                <div class="data-row">
+                    <ul id="trainerul" class="feature-box list" contenteditable="true">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3 class="heading-tertiary">Trainers </h3>
+                    </ul>
+                    <ul id="studentul" class="feature-box list" contenteditable="true">
+                        <i class="fas fa-user-graduate"></i>
+                        <h3 class="heading-tertiary">Students</h3>
+                    </ul>
+                </div>
+                <div class="data-row">
+                    <ul id="courseul" class="feature-box list" contenteditable="true">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">Courses</h3>
+                    </ul>
+                    <ul id="assignmentul" class="feature-box list" contenteditable="true">
+                        <i class="far fa-file-code"></i>
+                        <h3 class="heading-tertiary">Assignments</h3>
+                    </ul>
+                </div>
+            </div>
+            <div class="data">
+                <div class="data-row">
+                    <ul class="feature-box list" id="trainerPerCourse" contenteditable="true">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">Trainers Per Course</h3>
+                    </ul>
+                    <ul class="feature-box list" id="studentPerCourse" contenteditable="true">
+                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">Students Per Course</h3>
+                    </ul>
+                </div>
+                <div class="data-row">
+                    <ul class="feature-box list" id="assignPerCourse" contenteditable="true">
+                        <i class="far fa-file-code"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">Assignments Per Course</h3>
+                    </ul>
+                    <ul class="feature-box list" id="assignPerStudentperCourse" contenteditable="true">
+                        <i class="far fa-file-code"></i>
+                        <i class="fas fa-user-graduate"></i>
+                        <i class="fas fa-laptop-code"></i>
+                        <h3 class="heading-tertiary">Assignments & Student & Course</h3>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
