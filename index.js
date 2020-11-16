@@ -572,7 +572,9 @@ function validateAssignmentperCourseForm() {
     }
 }
 
+//comment
 function validateAssignmentStudentperCourseForm() {
+    var testVar;
     const birthday = asStCoursedateOfBirth.value;
     const parts = birthday.split("-");
     const day = parseInt(parts[2], 10);
