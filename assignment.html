@@ -22,6 +22,9 @@
                     <h3 class="heading-secondary">
                         Create an Assignment
                     </h3>
+                    <select name="EditAssignment" id="editAssignment" class="input">
+                        <option value="empty">Choose an existing Assignment to edit</option>
+                    </select>
                     <select name="assignment" id="assignment" class="input" required>
                         <option value="#">---Assignment---</option>
                         <optgroup label="Front-End"></optgroup>
@@ -38,17 +41,17 @@
                         </optgroup>
                     </select>
                     <input required="" type="text" id="subDate" class="input" placeholder="Submission-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" required />
+                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
                     <input type="number" class="input" placeholder="Oral Mark in %" id="oralMark" step="10" min="0"
                         max="20" required>
                     <input type="number" class="input" placeholder="Total Mark in %" id="totalMark" step="10" min="80"
                         max="100" required>
                     <button class="btn btn-form btn-assignment">Submit</button>
+                    <button class="btn btn-form btn-editAssignment">Update</button>
                 </form>
             </div>
         </section>
     </main>
-
     <script src="index.js"></script>
 </body>
 

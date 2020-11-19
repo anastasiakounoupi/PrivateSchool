@@ -22,6 +22,9 @@
                     <h3 class="heading-secondary">
                         Assignment per Course
                     </h3>
+                    <select name="Editassignment-course" id="editassignment-course" class="input input-sm">
+                        <option value="empty">Choose an Assignment per Course to Edit</option>
+                    </select>
                     <select name="course" id="stream_assignmentC" class="input input-sm" required>
                         <option value="#">---Course---</option>
                         <optgroup label="Front-End"></optgroup>
@@ -34,9 +37,9 @@
                         </optgroup>
                     </select>
                     <input type="text" id="startDate_assignmentC" class="input input-sm" placeholder="Start-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" required />
+                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
                     <input type="text" id="endDate_assignmentC" class="input input-sm" placeholder="End-Date"
-                        min="2021-03-01" onfocus="(this.type='date')" required />
+                        min="2021-03-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
 
                     <div class="radio-group">
                         <label for="part_assignmentC" class="heading-tertiary">
@@ -66,12 +69,14 @@
                         </optgroup>
                     </select>
                     <input type="text" id="subDate_assignmentC" class="input input-sm" placeholder="Submission-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" required required />
+                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required
+                        required />
                     <input type="number" class="input input-sm" placeholder="Oral Mark in %" id="oralMark_assignmentC"
                         step="10" min="0" max="20" required>
                     <input type="number" class="input input-sm" placeholder="Total Mark in %" id="totalMark_assignmentC"
                         step="10" min="80" max="100" required>
                     <button class="btn btn-form btn-assignment_course">Submit</button>
+                    <button class="btn btn-form btn-editassignment_course">Update</button>
                 </form>
             </div>
         </section>

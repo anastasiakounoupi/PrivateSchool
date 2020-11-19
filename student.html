@@ -22,12 +22,19 @@
                 <h3 class="heading-secondary">
                     Add a student
                 </h3>
-                <input type="text" class="input" placeholder="First Name" id="stfirstname" required>
+                <select name="EditStudent" id="editStudent" class="input">
+                    <option value="empty">Choose an existing Student to edit</option>
+                </select>
+                <input type="text" class="input" placeholder="First Name" id="stfirstname" pattern="[A-Za-z]{1,15}"
+                    title="Please fill out the field with 3-15 characters and no numbers" minlength="3" maxlength="15"
+                    required>
                 <label for="stfirstname"></label>
-                <input type="text" class="input" placeholder="Last Name" id="stlastname" required>
+                <input type="text" class="input" placeholder="Last Name" id="stlastname" pattern="[A-Za-z]{1,15}"
+                    minlength="3" maxlength="15" title="Please fill out the field with 3-15 characters and no numbers"
+                    required>
                 <label for="stlastname"></label>
                 <input type="text" id="birthday" class="input" placeholder="Date of Birth" min="1950-01-01"
-                    max="2001-12-31" onfocus="(this.type='date')" required />
+                    max="2001-12-31" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
                 <div class="radio-group">
                     <label for="upfront" class="heading-tertiary">
                         <input type="radio" class="radio" id="upfront" name="tuition" value="Pay Upfront" required>
@@ -39,11 +46,11 @@
                     </label>
                 </div>
                 <button class="btn btn-form btn-student">Submit</button>
+                <button class="btn btn-form btn-editStudent">Update</button>
             </form>
         </div>
 
     </main>
-
     <script src="index.js"></script>
 
 </body>

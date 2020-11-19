@@ -22,13 +22,20 @@
                     <h3 class="heading-secondary">
                         Add a Student per Course
                     </h3>
+                    <select name="Editstudent-course" id="editstudent-course" class="input input-sm">
+                        <option value="empty">Choose a Student per Course to Edit</option>
+                    </select>
                     <input type="text" class="input input-sm" placeholder="First Name" id="stfirstname_studentC"
-                        required>
+                        pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
+                        title="Please fill out the field with 3-15 characters and no numbers" required>
                     <label for="stfirstname_studentC"></label>
-                    <input type="text" class="input input-sm" placeholder="Last Name" id="stlastname_studentC" required>
+                    <input type="text" class="input input-sm" placeholder="Last Name" id="stlastname_studentC"
+                        pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
+                        title="Please fill out the field with 3-15 characters and no numbers" required>
                     <label for="stlastname_studentC"></label>
                     <input type="text" id="birthday_studentC" class="input input-sm" placeholder="Date of Birth"
-                        min="1950-01-01" max="2001-12-31" onfocus="(this.type='date')" required />
+                        min="1950-01-01" max="2001-12-31" onfocus="(this.type='date')"
+                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
                     <div class="radio-group">
                         <label for="upfront_studentC" class="heading-tertiary">
                             <input type="radio" class="radio" id="upfront_studentC" name="tuition_studentC"
@@ -53,9 +60,9 @@
                         </optgroup>
                     </select>
                     <input type="text" id="startDate_studentC" class="input input-sm" placeholder="Start-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" required />
+                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
                     <input type="text" id="endDate_studentC" class="input input-sm" placeholder="End-Date"
-                        min="2021-03-01" onfocus="(this.type='date')" required />
+                        min="2021-03-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
 
                     <div class="radio-group">
                         <label for="part_studentC" class="heading-tertiary">
@@ -70,6 +77,7 @@
                         </label>
                     </div>
                     <button class="btn btn-form btn-student_course">Submit</button>
+                    <button class="btn btn-form btn-editstudent_course">Update</button>
                 </form>
             </div>
         </section>

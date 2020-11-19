@@ -23,22 +23,31 @@
                     <h3 class="heading-secondary">
                         Add a trainer
                     </h3>
-                    <input type="text" class="input" placeholder="First Name" id="firstname" required>
+                    <select name="EditTrainer" id="editTrainer" class="input">
+                        <option value="empty">Choose an existing Trainer to edit</option>
+                    </select>
+                    <input type="text" class="input" placeholder="First Name" id="firstname" pattern="[A-Za-z]{1,15}"
+                        minlength="3" maxlength="15" required
+                        title="Please fill out the field with 3-15 characters and no numbers">
                     <label for="firstname"></label>
-                    <input type="text" class="input" placeholder="Last Name" id="lastname" required>
+                    <input type="text" class="input" placeholder="Last Name" id="lastname" pattern="[A-Za-z]{1,15}"
+                        minlength="3" maxlength="15"
+                        title="Please fill out the field with 3-15 characters and no numbers" required>
                     <label for="lastname"></label>
-                    <select name="course" id="subject" class="input" required="required">
+                    <select name="course" id="subject" class="input" required="true" title="Please choose a Subject">
                         <option value="#">---Subject---</option>
                         <optgroup label="Front-End"></optgroup>
-                        <option value="Front/html">HTNL/CSS/JavaScript</option>
-                        <option value="Front/react">React JS</option>
+                        <option value="Front-HTML-CSS-JS">HTNL/CSS/JavaScript</option>
+                        <option value="Front-ReactJs">React JS</option>
                         </optgroup>
                         <optgroup label="Back-End"></optgroup>
-                        <option value="Back/node">Node JS</option>
-                        <option value="Back/java">Java</option>
+                        <option value="Back-NodeJs">Node JS</option>
+                        <option value="Back-Java">Java</option>
                         </optgroup>
                     </select>
                     <button class="btn btn-form btn-trainer">Submit</button>
+                    <button class="btn btn-form btn-editTrainer">Update</button>
+
                 </form>
             </div>
         </section>

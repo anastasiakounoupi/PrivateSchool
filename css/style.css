@@ -551,7 +551,7 @@ input:focus:invalid{
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
     .join-section {
       flex-direction: column;
       justify-content: center;
