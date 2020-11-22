@@ -18,37 +18,37 @@
         <section class="input-form">
             <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
             <div class="container container-assignment">
-                <form action="#" class="form">
-                    <h3 class="heading-secondary">
-                        Create an Assignment
-                    </h3>
-                    <select name="EditAssignment" id="editAssignment" class="input">
-                        <option value="empty">Choose an existing Assignment to edit</option>
-                    </select>
-                    <select name="assignment" id="assignment" class="input" required>
-                        <option value="#">---Assignment---</option>
-                        <optgroup label="Front-End"></optgroup>
-                        <option value="Front/html-landingpage">Create a Landing Page - HTML/CSS/JS</option>
-                        <option value="Front/html-coinGame">Create a Coin Game - HTML/CSS/JS</option>
-                        <option value="Front/react-landingpage">Create a Landing Page - React</option>
-                        <option value="Front/react-coinGame">Create a Coin Game - React</option>
-                        </optgroup>
-                        <optgroup label="Back-End"></optgroup>
-                        <option value="Back/node-e-shop">Create an e-Shop - Node JS</option>
-                        <option value="Back/node-algorithm">Compute an Algorithm - Node JS</option>
-                        <option value="Back/java-e-shop">Create an e-Shop - Java</option>
-                        <option value="Back/java-algorithm">Compute an Algorithm - Java</option>
-                        </optgroup>
-                    </select>
-                    <input required="" type="text" id="subDate" class="input" placeholder="Submission-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-                    <input type="number" class="input" placeholder="Oral Mark in %" id="oralMark" step="10" min="0"
-                        max="20" required>
-                    <input type="number" class="input" placeholder="Total Mark in %" id="totalMark" step="10" min="80"
-                        max="100" required>
+                <section class="form">
+                    <form action="#" id="assignmentForm">
+                        <h3 class="heading-secondary ">
+                            Create an Assignment
+                        </h3>
+                        <select name="EditAssignment" id="editAssignment" class="input">
+                            <option value="empty">Choose an existing Assignment to edit</option>
+                        </select>
+                        <select name="assignment" id="assignment" class="input" required>
+                            <option value="#">---Assignment---</option>
+                            <optgroup label="Front-End"></optgroup>
+                            <option value="Front/html-School Layout">Create a School Layout - HTML/CSS/JS</option>
+                            <option value="Front/react-School Layout">Create a School Layout - React</option>
+                            </optgroup>
+                            <optgroup label="Back-End"></optgroup>
+                            <option value="Back/node-e-shop">Create an e-Shop - Node JS</option>
+                            <option value="Back/java-e-shop">Create an e-Shop - Java</option>
+                            </optgroup>
+                        </select>
+                        <input required="" type="text" id="subDate" class="input" placeholder="Submission-Date"
+                            min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                            required />
+                        <input type="number" class="input" placeholder="Oral Mark in %" id="oralMark" step="10" min="0"
+                            max="20" required>
+                        <input type="number" class="input" placeholder="Total Mark in %" id="totalMark" step="10"
+                            min="80" max="100" required>
+                        <p class="heading-secondary error"></p>
+                    </form>
                     <button class="btn btn-form btn-assignment">Submit</button>
                     <button class="btn btn-form btn-editAssignment">Update</button>
-                </form>
+                </section>
             </div>
         </section>
     </main>

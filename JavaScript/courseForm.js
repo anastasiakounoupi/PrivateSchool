@@ -7,7 +7,8 @@ const endDate = document.getElementById('endDate');
 const partType = document.getElementById('part');
 const fullType = document.getElementById('full');
 const editCourse = document.getElementById('editCourse');
-let courseArray = [];
+const courseForm = document.getElementById('courseForm');
+const errCourse = document.querySelector('.error');
 
 // ---------------------Course Class to create Course Objects-------------------
 class Course {
@@ -22,12 +23,11 @@ class Course {
 
 function storeCourseData() {
     typeRadio = document.querySelector('input[name="type"]:checked');
-    validateCourseForm();
     if (validateCourseForm()) {
         const Course1 = new Course(stream.value, startDate.value, endDate.value, typeRadio.value);
         courseArray.push(Course1);
+        courseForm.submit();
         updateSavedColumns();
-        alert('submitted succesfully');
     } else {
         console.log('wrong input');
     }
@@ -60,7 +60,6 @@ function EditCourseDom() {
 function UpdateCourseDom() {
     console.log('entered func');
     let y = editCourse.selectedIndex - 1;
-    validateCourseForm();
     if (validateCourseForm()) {
         courseArray[y].stream = stream.value;
         courseArray[y].startDate = startDate.value;
@@ -70,10 +69,8 @@ function UpdateCourseDom() {
         } else {
             courseArray[y].type = 'Full-Time';
         }
-
+        courseForm.submit();
         updateSavedColumns();
-        alert('updated succesfully');
-
     }
 }
 
@@ -83,19 +80,46 @@ editCourseBtn.addEventListener('click', UpdateCourseDom);
 
 //------------------------- Validation for the Course Form----------------------------
 function validateCourseForm() {
+    const start = startDate.value;
+    const end = endDate.value;
+    const partsStart = start.split("-");
+    const partsEnd = end.split("-");
+    const dayStart = parseInt(partsStart[2], 10);
+    const monthStart = parseInt(partsStart[1], 10);
+    const yearStart = parseInt(partsStart[0], 10);
+    const dayEnd = parseInt(partsEnd[2], 10);
+    const monthEnd = parseInt(partsEnd[1], 10);
+    const yearEnd = parseInt(partsEnd[0], 10);
     if (stream.value === null || stream.value === '#') {
         stream.classList.add('invalid');
+        startDate.classList.remove('invalid');
+        endDate.classList.remove('invalid');
+        errCourse.innerText = 'Please choose course';
         return false;
     }
-    else if (startDate.value === '') {
+    else if (startDate.value === '' || yearStart < 2020 || monthStart == 0 || monthStart < 12 || dayStart < 0 || dayStart > 31) {
         startDate.classList.add('invalid');
+        stream.classList.remove('invalid');
+        endDate.classList.remove('invalid');
+        errCourse.innerText = 'Start Date has to be set and cant be before next month';
         return false;
     }
-    else if (endDate.value === '') {
+    else if (endDate.value === '' || yearEnd < 2021 || monthEnd == 0 || monthEnd < 3 || dayEnd < 0 || dayEnd > 31) {
         endDate.classList.add('invalid');
+        startDate.classList.remove('invalid');
+        stream.classList.remove('invalid');
+        errCourse.innerText = 'End Date has to be at least three months after the start';
+        return false;
+    }
+    else if (!partType.checked && !fullType.checked) {
+        errCourse.innerText = 'Choose a course type';
+        stream.classList.remove('invalid');
+        startDate.classList.remove('invalid');
+        endDate.classList.remove('invalid');
         return false;
     }
     else {
+        errCourse.innerText = '';
         return true;
     }
 }

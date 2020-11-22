@@ -8,7 +8,8 @@ const dateOfBirth = document.getElementById('birthday');
 const upfrontTuition = document.getElementById('upfront');
 const monthlyTuition = document.getElementById('monthly');
 const editStudent = document.getElementById('editStudent');
-let studentArray = [];
+const studentForm = document.getElementById('studentForm');
+const errStudent = document.querySelector('.error');
 
 // ---------------------Student Class to create Student Objects-------------------
 
@@ -25,12 +26,11 @@ class Student {
 
 function storeStudentData() {
     tuitionRadio = document.querySelector('input[name="tuition"]:checked');
-    validateStudentForm();
     if (validateStudentForm()) {
         const Student1 = new Student(studentFirstName.value, studentLastName.value, dateOfBirth.value, tuitionRadio.value);
         studentArray.push(Student1);
+        studentForm.submit();
         updateSavedColumns();
-        alert('submitted succesfully');
     } else {
         console.log('wrong input');
     }
@@ -64,7 +64,6 @@ function EditStudentDom() {
 function UpdateStudentDom() {
     console.log('entered func');
     let y = editStudent.selectedIndex - 1;
-    validateStudentForm();
     if (validateStudentForm()) {
         studentArray[y].firstName = studentFirstName.value;
         studentArray[y].lastName = studentLastName.value;
@@ -74,9 +73,8 @@ function UpdateStudentDom() {
         } else {
             studentArray[y].tuition = 'Pay Monthly';
         }
+        studentForm.submit();
         updateSavedColumns();
-        alert('updated succesfully');
-
     }
 }
 
@@ -87,26 +85,42 @@ editStudentBtn.addEventListener('click', UpdateStudentDom);
 //------------------------- Validation for the Student Form----------------------------
 
 function validateStudentForm() {
+    const regex = /^[a-zA-Z ]{2,15}$/;
     const birthday = dateOfBirth.value;
     const parts = birthday.split("-");
     const day = parseInt(parts[2], 10);
     const month = parseInt(parts[1], 10);
     const year = parseInt(parts[0], 10);
-    if (studentFirstName.value === null || studentFirstName.value === '') {
-        studentFirstName.placeholder = 'please fill out';
+    if (studentFirstName.value === null || studentFirstName.value === '' || regex.test(studentFirstName.value) === false) {
         studentFirstName.classList.add('invalid');
+        studentLastName.classList.remove('invalid');
+        dateOfBirth.classList.remove('invalid');
+        errStudent.innerText = 'First Name up to 15 letters / no numbers';
         return false;
     }
-    else if (studentLastName.value === null || studentLastName.value === '') {
-        studentLastName.placeholder = 'please fill out';
+    else if (studentLastName.value === null || studentLastName.value === '' || regex.test(studentLastName.value) === false) {
         studentLastName.classList.add('invalid');
+        studentFirstName.classList.remove('invalid');
+        dateOfBirth.classList.remove('invalid');
+        errStudent.innerText = 'Last Name up to 15 letters / no numbers';
         return false;
     }
     else if (dateOfBirth.value === '' || year < 1950 || year > 2001 || month == 0 || month > 12 || day < 0 || day > 31) {
         dateOfBirth.classList.add('invalid');
+        studentLastName.classList.remove('invalid');
+        studentFirstName.classList.remove('invalid');
+        errStudent.innerText = 'Enter your date of Birth';
+        return false;
+    }
+    else if (!upfrontTuition.checked && !monthlyTuition.checked) {
+        errStudent.innerText = 'Choose payment type';
+        dateOfBirth.classList.remove('invalid');
+        studentLastName.classList.remove('invalid');
+        studentFirstName.classList.remove('invalid');
         return false;
     }
     else {
+        errStudent.innerText = '';
         return true;
     }
 }

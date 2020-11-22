@@ -18,67 +18,72 @@
         <section class="input-form">
             <a href="index.html" class="btn btn-home"><i class="fas fa-home"></i></a>
             <div class="container container_st_course">
-                <form action="#" class="form">
-                    <h3 class="heading-secondary">
-                        Add a Student per Course
-                    </h3>
-                    <select name="Editstudent-course" id="editstudent-course" class="input input-sm">
-                        <option value="empty">Choose a Student per Course to Edit</option>
-                    </select>
-                    <input type="text" class="input input-sm" placeholder="First Name" id="stfirstname_studentC"
-                        pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
-                        title="Please fill out the field with 3-15 characters and no numbers" required>
-                    <label for="stfirstname_studentC"></label>
-                    <input type="text" class="input input-sm" placeholder="Last Name" id="stlastname_studentC"
-                        pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
-                        title="Please fill out the field with 3-15 characters and no numbers" required>
-                    <label for="stlastname_studentC"></label>
-                    <input type="text" id="birthday_studentC" class="input input-sm" placeholder="Date of Birth"
-                        min="1950-01-01" max="2001-12-31" onfocus="(this.type='date')"
-                        pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-                    <div class="radio-group">
-                        <label for="upfront_studentC" class="heading-tertiary">
-                            <input type="radio" class="radio" id="upfront_studentC" name="tuition_studentC"
-                                value="Pay Upfront" required>
-                            Pay upfront
-                        </label>
-                        <label for="monthly_studentC" class="heading-tertiary">
-                            <input type="radio" class="radio" id="monthly_studentC" name="tuition_studentC"
-                                value="Pay Monthly" required>
-                            pay monthly
-                        </label>
-                    </div>
-                    <select name="course" id="stream_studentC" class="input input-sm" required>
-                        <option value="#">---Course---</option>
-                        <optgroup label="Front-End"></optgroup>
-                        <option value="Front/html">HTNL/CSS/JavaScript</option>
-                        <option value="Front/react">React JS</option>
-                        </optgroup>
-                        <optgroup label="Back-End"></optgroup>
-                        <option value="Back/node">Node JS</option>
-                        <option value="Back/java">Java</option>
-                        </optgroup>
-                    </select>
-                    <input type="text" id="startDate_studentC" class="input input-sm" placeholder="Start-Date"
-                        min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
-                    <input type="text" id="endDate_studentC" class="input input-sm" placeholder="End-Date"
-                        min="2021-03-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+                <section class="form">
+                    <form action="#" id="studentCourseForm">
+                        <h3 class="heading-secondary">
+                            Add a Student per Course
+                        </h3>
+                        <select name="Editstudent-course" id="editstudent-course" class="input input-sm">
+                            <option value="empty">Choose a Student per Course to Edit</option>
+                        </select>
+                        <input type="text" class="input input-sm" placeholder="First Name" id="stfirstname_studentC"
+                            pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
+                            title="Please fill out the field with 3-15 characters and no numbers" required>
+                        <label for="stfirstname_studentC"></label>
+                        <input type="text" class="input input-sm" placeholder="Last Name" id="stlastname_studentC"
+                            pattern="[A-Za-z]{1,15}" minlength="3" maxlength="15"
+                            title="Please fill out the field with 3-15 characters and no numbers" required>
+                        <label for="stlastname_studentC"></label>
+                        <input type="text" id="birthday_studentC" class="input input-sm" placeholder="Date of Birth"
+                            min="1950-01-01" max="2001-12-31" onfocus="(this.type='date')"
+                            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" required />
+                        <div class="radio-group">
+                            <label for="upfront_studentC" class="heading-tertiary">
+                                <input type="radio" class="radio" id="upfront_studentC" name="tuition_studentC"
+                                    value="Pay Upfront" required>
+                                Pay upfront
+                            </label>
+                            <label for="monthly_studentC" class="heading-tertiary">
+                                <input type="radio" class="radio" id="monthly_studentC" name="tuition_studentC"
+                                    value="Pay Monthly" required>
+                                pay monthly
+                            </label>
+                        </div>
+                        <select name="course" id="stream_studentC" class="input input-sm" required>
+                            <option value="#">---Course---</option>
+                            <optgroup label="Front-End"></optgroup>
+                            <option value="Front/html">HTNL/CSS/JavaScript</option>
+                            <option value="Front/react">React JS</option>
+                            </optgroup>
+                            <optgroup label="Back-End"></optgroup>
+                            <option value="Back/node">Node JS</option>
+                            <option value="Back/java">Java</option>
+                            </optgroup>
+                        </select>
+                        <input type="text" id="startDate_studentC" class="input input-sm" placeholder="Start-Date"
+                            min="2020-12-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                            required />
+                        <input type="text" id="endDate_studentC" class="input input-sm" placeholder="End-Date"
+                            min="2021-03-01" onfocus="(this.type='date')" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                            required />
 
-                    <div class="radio-group">
-                        <label for="part_studentC" class="heading-tertiary">
-                            <input type="radio" class="radio" id="part_studentC" name="type_studentC" value="Part-Time"
-                                required>
-                            part-time
-                        </label>
-                        <label for="full_studentC" class="heading-tertiary">
-                            <input type="radio" class="radio" id="full_studentC" name="type_studentC" value="Full-Time"
-                                required>
-                            full-time
-                        </label>
-                    </div>
+                        <div class="radio-group">
+                            <label for="part_studentC" class="heading-tertiary">
+                                <input type="radio" class="radio" id="part_studentC" name="type_studentC"
+                                    value="Part-Time" required>
+                                part-time
+                            </label>
+                            <label for="full_studentC" class="heading-tertiary">
+                                <input type="radio" class="radio" id="full_studentC" name="type_studentC"
+                                    value="Full-Time" required>
+                                full-time
+                            </label>
+                        </div>
+                        <p class="heading-secondary error"></p>
+                    </form>
                     <button class="btn btn-form btn-student_course">Submit</button>
                     <button class="btn btn-form btn-editstudent_course">Update</button>
-                </form>
+                </section>
             </div>
         </section>
     </main>

@@ -32,6 +32,22 @@ body{
     justify-content: center;
 }
 
+.header-data{
+    height: 75vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(42, 157, 143, 0.8),
+        rgba(38, 70, 83, 0.8)), 
+    url(../images/data.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(50% 0%, 80% 0, 96% 15%, 95% 81%, 81% 93%, 50% 100%, 14% 93%, 4% 80%, 3% 14%, 22% 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .header__text-box{
     text-align: center;
 }
@@ -100,6 +116,16 @@ body{
     margin: -5rem 5rem 3rem 0;  
 }
 
+.btn-home:hover{
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(#000, .2);
+}
+
+.btn-home:active{
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(#000, .2);
+}
+
 .btn-home i{
     font-size: 2rem;
     background-image: linear-gradient(to right, #2a9d8f, #264653);
@@ -117,7 +143,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    clip-path: polygon(0 18%, 100% 0%, 100% 80vh, 0% 100%);
+    clip-path: polygon(0 18%, 100% 0%, 100% 82%, 0% 100%);
 }
 
 .feature-box{
@@ -129,7 +155,7 @@ body{
     padding: 2rem;
     text-align: center;
     border-radius: 10% / 50%;
-    box-shadow: 0 1.5rem 4rem rgba(#000, 0.2);
+    box-shadow: .2rem .2rem .2rem .1rem rgba(0, 0, 255, .2);
     transition: transform .3s;
 }
 
@@ -148,6 +174,10 @@ body{
     background-clip: text;
     color: transparent;
     margin-bottom: 1.5rem;
+}
+
+.feature-box .i-sm{
+    font-size: 4rem;
 }
 
 .feature-box p{
@@ -199,6 +229,15 @@ body{
     letter-spacing: 2px;
     animation-name: moveInLeft;
     animation-duration: 1s;
+}
+
+.form .heading-secondary{
+    font-size: 2rem;
+}
+
+.error{
+    font-size: 1.5rem;
+    background-image: linear-gradient(to right, #a17c72, #e76f51);
 }
 
 .about p{
@@ -297,6 +336,8 @@ body{
       transparent 50%) ,
       url(../images/student.jpg);
     background-position: top;
+    height: 70vh;   
+
 }
 
 .container-course{
@@ -304,7 +345,9 @@ body{
      rgba(255,255,255, .9) 0%,
      rgba(255,255,255, .9) 50%,
       transparent 50%) ,
-      url(../images/course.jpg);        
+      url(../images/course.jpg);    
+    height: 70vh;   
+
 }
 
 .container-assignment{
@@ -313,6 +356,7 @@ body{
      rgba(255,255,255, .9) 50%,
       transparent 50%) ,
       url(../images/assignment.jpg);
+    height: 70vh;   
 }
 
 .container_tr_course{
@@ -321,7 +365,7 @@ body{
      rgba(255,255,255, .9) 50%,
       transparent 50%) ,
       url(../images/trcou.jpg);
-    height: 75vh;   
+    height: 80vh;   
 }
 
 .container_st_course{
@@ -330,7 +374,7 @@ body{
      rgba(255,255,255, .9) 50%,
       transparent 50%) ,
       url(../images/stcou.jpg);
-    height: 80vh;   
+    height: 85vh;   
 }
 
 .container_as_course{
@@ -339,7 +383,7 @@ body{
      rgba(255,255,255, .9) 50%,
       transparent 50%) ,
       url(../images/asscou.jpg);
-    height: 80vh;  
+    height: 85vh;  
 }
 
 .container_as_st_course{
@@ -384,7 +428,12 @@ body{
 .input-sm{
     padding: 1rem 1rem;
     margin-bottom: 1rem;
-    width: 90%;
+
+}
+
+.input-xs{
+    padding: .8rem .8rem;
+    margin-bottom: .8rem;
 }
 
 input:focus{
@@ -435,8 +484,7 @@ input:focus:invalid{
 
 .data{
     background-size: contain;
-    background-color:#fff;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background-color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -445,9 +493,7 @@ input:focus:invalid{
     width: 100%;
     margin-top: -.5rem;
 }
-.data:nth-child(2){
-    clip-path: polygon(20% 100%, 80% 100%, 100% 0, 0 0%); 
-}
+
 
 .data-row{
     display: flex;
@@ -458,11 +504,8 @@ input:focus:invalid{
 }
 
 .data-form{
-    background-image: linear-gradient(
-        to right bottom,
-        rgba(42, 157, 143, 0.8),
-        rgba(38, 70, 83, 0.8)), 
-    url(../images/pattern.jpg);
+    background-color: white;
+
     padding:  0 ;
     height: 100%;
 }
@@ -501,7 +544,7 @@ input:focus:invalid{
 .list{   
     outline: none;
     margin:  3rem;
-    background-color: #e4f0f0;
+    background-color: #dce2e2;
     width: 40%;
 }
 
@@ -587,5 +630,9 @@ input:focus:invalid{
     .list{
         width: 40%;
     }
+    .btn-home:hover{
+        transform: translateY(-7rem);
+        box-shadow: 0 1rem 2rem rgba(#000, .2);
+    }   
 
 }  

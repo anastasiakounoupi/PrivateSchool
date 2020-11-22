@@ -6,7 +6,8 @@ const trainerFirstName = document.getElementById('firstname');
 const trainerLastName = document.getElementById('lastname');
 const subject = document.getElementById('subject');
 const editTrainer = document.getElementById('editTrainer');
-let trainerArray = [];
+const errTrainer = document.querySelector('.error');
+const trainerForm = document.getElementById('trainerForm');
 
 // ---------------------Trainer Class to create Trainer Objects-------------------
 
@@ -21,12 +22,11 @@ class Trainer {
 //-----------------------Storing Data from the Trainer Form input into localStorage after form Validation-------------
 
 function storeTrainerData() {
-    validateTrainerForm();
     if (validateTrainerForm()) {
         const Trainer1 = new Trainer(trainerFirstName.value, trainerLastName.value, subject.value);
         trainerArray.push(Trainer1);
+        trainerForm.submit();
         updateSavedColumns();
-        alert('submitted succesfully');
     } else {
         console.log('wrong input');
     }
@@ -52,13 +52,12 @@ function EditTrainerDom() {
 
 function UpdateTrainerDom() {
     let y = editTrainer.selectedIndex - 1;
-    validateTrainerForm();
     if (validateTrainerForm()) {
-        trainerArray[y].firstName = trainerFirstName.value
-        trainerArray[y].lastName = trainerLastName.value
-        trainerArray[y].subject = subject.value
+        trainerArray[y].firstName = trainerFirstName.value;
+        trainerArray[y].lastName = trainerLastName.value;
+        trainerArray[y].subject = subject.value;
+        trainerForm.submit();
         updateSavedColumns();
-        alert('updated succesfully');
     }
 }
 
@@ -70,21 +69,31 @@ editTrainerBtn.addEventListener('click', UpdateTrainerDom);
 //------------------------- Validation for the Trainer Form----------------------------
 
 function validateTrainerForm() {
-    if (trainerFirstName.value === null || trainerFirstName.value === '') {
-        trainerFirstName.placeholder = 'please fill out';
+    const regex = /^[a-zA-Z ]{2,15}$/;
+    if (trainerFirstName.value === null || trainerFirstName.value === '' || regex.test(trainerFirstName.value) === false) {
         trainerFirstName.classList.add('invalid');
+        trainerLastName.classList.remove('invalid');
+        subject.classList.remove('invalid');
+        errTrainer.innerText = 'First Name up to 15 letters / no numbers';
         return false;
     }
-    else if (trainerLastName.value === null || trainerLastName.value === '') {
-        trainerLastName.placeholder = 'please fill out';
+    else if (trainerLastName.value === null || trainerLastName.value === '' || regex.test(trainerLastName.value) === false) {
+        errTrainer.innerText = 'Last Name up to 15 letters / no numbers';
         trainerLastName.classList.add('invalid');
+        trainerFirstName.classList.remove('invalid');
+        subject.classList.remove('invalid');
+
         return false;
     }
     else if (subject.value === null || subject.value === '#') {
         subject.classList.add('invalid');
+        trainerLastName.classList.remove('invalid');
+        trainerFirstName.classList.remove('invalid');
+        errTrainer.innerText = 'Choose a Subject';
         return false;
     }
     else {
+        errTrainer.innerText = '';
         return true;
     }
 }

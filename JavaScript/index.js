@@ -7,6 +7,14 @@ const studentpCourse = document.getElementById('studentPerCourse');
 const assignCourse = document.getElementById('assignPerCourse');
 const assignStCourse = document.getElementById('assignPerStudentperCourse');
 
+let trainerArray = [];
+let studentArray = [];
+let courseArray = [];
+let assignmentArray = [];
+let trainerPerCourseArray = [];
+let studentPerCourseArray = [];
+let asStPerCourseArray = [];
+let asPerCourseArray = [];
 let listArrays = [];
 
 //----------------------------------localSorage SetUp-------------------------------------------
