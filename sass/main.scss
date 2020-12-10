@@ -1,0 +1,65 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/composition";
+@import "components/container";
+@import "components/feature-box";
+@import "components/form";
+@import "components/input";
+
+@import "layout/header";
+
+@import "pages/home";
+@import "pages/data";
+
+@media screen and (max-width: 1200px) {
+    .join-section {
+      flex-direction: column;
+      justify-content: center;
+      clip-path: none;
+    }
+    .join-section:nth-child(2){
+        padding-top: 5rem;
+        margin-top: -20rem;
+    }
+    .feature-box{
+        width: 60%;
+        margin: 2rem 0;
+    }
+    .photo{
+        width: 80%;
+    }
+    .photo--p1{
+        left: 10rem;
+    }
+    .photo--p3{
+        left: 10rem;
+        top: 5rem;
+    }
+    .btn-home{
+        transform: translateY(-7.5rem);
+    }
+    .container{
+        width: 100%;   
+    }
+    .container_as_st_course{
+        height: 100vh;
+    }
+    .list{
+        width: 40%;
+    }
+    .btn-home:hover{
+        transform: translateY(-7rem);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+    }   
+
+}  
+
+

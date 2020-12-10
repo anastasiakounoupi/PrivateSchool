@@ -1,0 +1,88 @@
+.container{
+    @include flex-row;
+    background-size: cover;
+    background-position: right;
+    height: 60vh;
+    width: 75%;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: -10vh;
+
+    &-trainer{
+        background-image:linear-gradient(105deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/trainer.jpg);
+        background-size: contain;
+    }
+    
+    &-student{
+        background-image:linear-gradient(105deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/student.jpg);
+        background-position: top;
+        height: 70vh;   
+    
+    }
+    
+    &-course{
+        background-image:linear-gradient(105deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/course.jpg);    
+        height: 70vh;   
+    
+    }
+    
+    &-assignment{
+        background-image:linear-gradient(105deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/assignment.jpg);
+        height: 70vh;   
+    }
+    
+    &_tr_course{
+        background-image:linear-gradient(80deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/trcou.jpg);
+        height: 80vh;   
+    }
+    
+    &_st_course{
+        background-image:linear-gradient(80deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/stcou.jpg);
+        height: 85vh;   
+    }
+    
+    &_as_course{
+        background-image:linear-gradient(80deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/asscou.jpg);
+        height: 85vh;  
+    }
+    
+    &_as_st_course{
+        background-image:linear-gradient(80deg,
+         rgba($color-white, .9) 0%,
+         rgba($color-white, .9) 50%,
+          transparent 50%) ,
+          url(../images/asstcou.jpg);
+        height: 97vh;  
+    }
+}
+

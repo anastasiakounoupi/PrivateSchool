@@ -1,0 +1,35 @@
+.photo{
+    width: 40%;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+    border-radius: 2px;
+    position: relative;
+    z-index: 10;
+    transition: all 0.2s;
+    outline-offset: 2rem;  
+
+    &--p1{
+        left: 4rem;
+        top: 2rem;
+    }
+    
+    &--p2{
+        right: 0;
+        top: 4rem;
+    }
+    
+    &--p3{
+        left: 20%;
+        top: -5rem;
+    }
+
+    &:hover{
+        outline: 1.5rem double $color-primary-dark;
+        transform: scale(1.05) translateY(-.5rem);
+        box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+        z-index: 20;
+    }
+
+}
+
+
+

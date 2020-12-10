@@ -50,7 +50,7 @@ getSavedColumns();
 function createDataViewElement(myArray) {
     for (let i = 0; i < myArray.length; i++) {
         const element = document.createElement("li");
-        element.classList.add('listelement');
+        element.classList.add('list__element');
 
         if (myArray === trainerArray) {
             element.innerHTML = `<b>First Name:</b> ${myArray[i].firstName} <br> <b>Last Name:</b> ${myArray[i].lastName} <br> <b>Subject:</b> ${myArray[i].subject}`
